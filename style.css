@@ -1,0 +1,255 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0 !important;
+}
+body{
+    font-family: "Montserrat", sans-serif !important;
+    color: #343a40 !important;
+    position: relative;
+}
+#random{
+    /* height: 22rem; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 10px;
+    padding: 1rem 20%;
+    background-color: rgb(228, 228, 228);
+}
+.city-name{
+    position: absolute;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#result{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* height: 45vh; */
+    background-color:rgb(228, 228, 228);
+}
+#result .aqi-city-card{
+    margin: 1rem 0;
+}
+#search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    /* height: 10vh; */
+    position: relative;
+}
+#search-box form{
+    width: 60%;
+
+}
+#search-box input{
+    width: 80%;
+}
+#search-box label{
+    margin: 0;
+}
+#city{
+    font-size: 25px;
+    padding-left: 10px;
+}
+#search-box .fa-search {
+    margin-left: 3rem !important;
+    font-size: 30px !important;
+}
+.fa-search:hover{
+    cursor: pointer;
+}
+.aqi-city-card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid black;
+    width: 15rem;
+    height: 20rem;
+    margin: 0 auto;
+    justify-content: center;
+    position: relative;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+   }
+.title h4:first-child, .last{
+    flex-grow: 5;
+}
+.title h4:last-child, .update h2{
+    flex-grow: 3;
+}
+.update{
+    align-items: center;
+    display: flex;
+}
+.last {
+    display: flex;
+    flex-direction: column;
+}
+.card-row{
+    display: flex;
+    align-items: center;
+}
+.card-row-left, .card-row-right{
+    display: flex;
+    flex-grow: 4;
+    width: 50%;
+    justify-content: space-around;
+}
+.aqi-city-card-random{
+    background-color: rgb(183, 183, 183);
+    position: relative;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#random .title{
+    margin-top: 60px;
+}
+.city-name-random{
+    text-align: center;
+    background-color: #343a40;
+    border-radius: 4px 4px 0 0 ;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white !important;
+    font-weight: 500;
+}
+.update-random, .title-random{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.title-random>h4{
+    font-weight: 900;
+}
+.update-random .last-random{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    /* align-items: center; */
+}
+.last-random h5{
+    font-weight: 900;
+}
+.update-random h2{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 5px;  
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 3rem;
+}
+.fa-question-circle{
+    color: white;
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+    font-size: 2.5rem;
+}
+.fa-question-circle:hover{
+    cursor: pointer;
+}
+#result .aqi-city-card-random {
+    width: 21rem;
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+}
+#scale-box{
+    position: absolute;
+    background-color: rgba(163, 163, 163, 0.74);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    /* height: 100%; */S
+    ;
+}
+table{
+    width: 50% !important;
+    /* border: 2px solid rgb(180, 180, 180) !important; */
+    margin: 2rem;
+}
+th, td {
+    display: table-cell !important;
+    border: 1px solid rgb(26, 26, 26) !important;
+    vertical-align: inherit !important;
+    text-align: center !important;
+}
+tbody>tr>th{
+    width: 80px !important;
+    padding: 5px !important;
+}
+.fa-times-circle{
+    position: absolute;
+    color:rgb(26, 26, 26);
+    margin: 1rem 19rem 0 0;
+    font-size: 2.5rem;
+    right: 0;
+    top: 0;
+}
+.fa-times-circle:hover{
+    cursor: pointer;
+}
+
+/*------------------------------------------------media query------*/
+    /* @media only screen and (max-width: 1200px) {
+        .aqi-city-card:nth-child(1), .aqi-city-card:nth-child(2){
+            display: none;
+        }
+        #random{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    @media only screen and (max-width: 992px) {
+    
+        .aqi-city-card:nth-child(1), .aqi-city-card:nth-child(2){
+            display: none;
+        }
+        #radnom{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .aqi-city-card:nth-child(1), .aqi-city-card:nth-child(2),.aqi-city-card:nth-child(3){
+            display: none;
+        }
+        #radnom{
+            grid-template-columns: 1fr 1fr;
+        }
+    
+    }
+    
+    @media only screen and (max-width: 575px) {
+        .aqi-city-card:nth-child(5),.aqi-city-card:nth-child(4),.aqi-city-card:nth-child(3),.aqi-city-card:nth-child(2){
+            display: none;
+        }
+        #random{
+            grid-template-columns: 1fr;
+        }
+    }
+     */
