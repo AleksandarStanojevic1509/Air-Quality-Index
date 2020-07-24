@@ -1,0 +1,392 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0 !important;
+}
+
+body {
+  font-family: "Montserrat", sans-serif !important;
+  color: #343a40 !important;
+  position: relative;
+}
+
+#random {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  padding: 1rem 20%;
+  background-color: #e4e4e4;
+}
+
+#random .title {
+  margin-top: 60px;
+}
+
+.city-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  width: 100%;
+  height: 50px;
+}
+
+#result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #e4e4e4;
+}
+
+#result .aqi-city-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid black;
+  width: 15rem;
+  height: 20rem;
+  margin: 0 auto;
+  position: relative;
+  margin: 1rem 0;
+}
+
+.aqi-city-card-random {
+  width: 21rem;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  background-color: #b7b7b7;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#search-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
+  padding: 1rem 0;
+  position: relative;
+}
+
+#search-box form {
+  width: 60%;
+}
+
+#search-box input {
+  width: 80%;
+}
+
+#search-box label {
+  margin: 0;
+}
+
+#search-box .fa-search {
+  margin-left: 3rem !important;
+  font-size: 30px !important;
+}
+
+#search-box .fa-search:hover {
+  cursor: pointer;
+}
+
+#city {
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+.title h4:first-child, .last {
+  -webkit-box-flex: 5;
+      -ms-flex-positive: 5;
+          flex-grow: 5;
+}
+
+.title h4:last-child, .update h2 {
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+}
+
+.update, .card-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
+}
+
+.last {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-row-left, .card-row-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+  width: 50%;
+}
+
+.city-name-random {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
+  text-align: center;
+  background-color: #343a40;
+  border-radius: 4px 4px 0 0;
+  height: 55px;
+  color: white !important;
+  font-weight: 500;
+}
+
+.update-random, .title-random {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
+  padding: 10px;
+}
+
+.title-random > h4 {
+  font-weight: 900;
+}
+
+.last-random h5 {
+  font-weight: 900;
+}
+
+.update-random h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30%;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 3rem;
+}
+
+.update-random .last-random {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+}
+
+.fa-question-circle {
+  color: white;
+  position: absolute;
+  right: 0;
+  margin-right: 5%;
+  font-size: 2.5rem;
+}
+
+.fa-question-circle:hover {
+  cursor: pointer;
+}
+
+#scale-box {
+  position: absolute;
+  background-color: rgba(163, 163, 163, 0.74);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  width: 100%;
+}
+
+table {
+  width: 50% !important;
+  margin: 2rem;
+}
+
+table th, table td {
+  display: table-cell !important;
+  border: 1px solid #1a1a1a !important;
+  vertical-align: inherit !important;
+  text-align: center !important;
+}
+
+tbody > tr > th {
+  width: 80px !important;
+  padding: 5px !important;
+}
+
+.fa-times-circle {
+  position: absolute;
+  color: #1a1a1a;
+  margin: 1rem 19rem 0 0;
+  font-size: 2.5rem;
+  right: 0;
+  top: 0;
+}
+
+.fa-times-circle:hover {
+  cursor: pointer;
+}
+
+/*------------------------------------------------media query------*/
+/* @media only screen and (max-width: 1200px) {
+        .aqi-city-card:nth-child(1), .aqi-city-card:nth-child(2){
+            display: none;
+        }
+        #random{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    @media only screen and (max-width: 992px) {
+    
+        .aqi-city-card:nth-child(1), .aqi-city-card:nth-child(2){
+            display: none;
+        }
+        #radnom{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .aqi-city-card:nth-child(1), .aqi-city-card:nth-child(2),.aqi-city-card:nth-child(3){
+            display: none;
+        }
+        #radnom{
+            grid-template-columns: 1fr 1fr;
+        }
+    
+    }
+    
+    @media only screen and (max-width: 575px) {
+        .aqi-city-card:nth-child(5),.aqi-city-card:nth-child(4),.aqi-city-card:nth-child(3),.aqi-city-card:nth-child(2){
+            display: none;
+        }
+        #random{
+            grid-template-columns: 1fr;
+        }
+    }
+     */
+/*# sourceMappingURL=style.css.map */
